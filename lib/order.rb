@@ -6,7 +6,7 @@ class Order
   FILE_NAME = "order.json"
   PATH = "data/" + FILE_NAME
 
-  def self.get_order
+  def self.load_order
     file = File.read(PATH)
     order = JSON.parse(file, symbolize_names: true)
     line_items = order.map do |line_item|
