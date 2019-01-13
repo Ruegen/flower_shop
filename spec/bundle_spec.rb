@@ -16,15 +16,15 @@ describe "bundle instance" do
     expect(bundle.price_in_cents).must_equal price_in_cents
   end
 
-  it "should add bundle each initialize" do
-    expect(Bundle.bundles).must_include bundle
-    expect(Bundle.bundles.count).must_equal 1
-  end
+  describe "class methods" do
+    it "should return bundles by code" do
+      bundles = Bundle.get_bundle_by_code code
+      expect(bundles.first.code).must_equal code
+    end
 
-  it "should return bundles by code" do
-    bundle
-    bundles = Bundle.get_bundles_by_code code
-    expect(bundles.first.code).must_equal code
-    expect(bundles.first).must_equal bundle
+    it "should return bundle of instances" do
+      bundles = Bundle.get_bundles
+      expect(bundles.first).must_be_instance_of Bundle
+    end
   end
 end

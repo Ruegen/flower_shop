@@ -3,8 +3,8 @@ class Shop
     @order = nil
   end
 
-  def issue_order(amount, code)
-    @order = Order.new amount code
+  def issue_order(qty, code)
+    @order = Order.new qty code
   end
 
   def print_invoice
