@@ -18,7 +18,21 @@ class LineItem
       total + bundle.price_in_cents
     end
     total_in_dollars = Money.new(total_in_cents, "USD").format
-    "#{@qty} #{@code} #{total_in_dollars}"
+    puts "#{@qty} #{@code} #{total_in_dollars}"
+  end
+
+  def print_subtotal
+    order_collection = Hash.new(0)
+
+    # iterate over the array, counting duplicate entries
+    @bundle_best_fit.each do |order|
+      order_collection[order] += 1
+    end
+
+    order_collection.each do |order, n|
+      price_in_dollars = Money.new(order.price_in_cents, "USD").format
+      puts "\t#{n} x #{order.qty} #{price_in_dollars}"
+    end
   end
 
   private
