@@ -14,4 +14,10 @@ class Bundle
   def self.bundles
     @@bundles
   end
+
+  def self.get_bundles_by_code(code)
+    @@bundles.select { |bundle|
+      bundle.code == code
+    }
+  end
 end

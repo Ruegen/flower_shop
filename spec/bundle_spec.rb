@@ -22,6 +22,9 @@ describe "bundle instance" do
   end
 
   it "should return bundles by code" do
-    Bundle.get_bundles_by_code code
+    bundle
+    bundles = Bundle.get_bundles_by_code code
+    expect(bundles.first.code).must_equal code
+    expect(bundles.first).must_equal bundle
   end
 end
