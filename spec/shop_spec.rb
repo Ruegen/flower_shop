@@ -1,6 +1,6 @@
 require "shop"
 
-orders = [
+order = [
   {qty: 10, code: :R12},
   {qty: 15, code: :L09},
   {qty: 13, code: :T58},
@@ -23,7 +23,7 @@ describe "shop" do
 
   it "should print invoice" do
     shop = Shop.new
-    shop.place_new_orders orders
-    expect(shop.print_last_invoice).must_equal result
+    shop.issue_order order
+    expect(shop.print_invoice).must_equal result
   end
 end
