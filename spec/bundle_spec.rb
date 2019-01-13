@@ -23,7 +23,7 @@ describe "bundle instance" do
     end
 
     it "should return bundle of instances" do
-      bundles = Bundle.get_bundles
+      bundles = Bundle.load_bundles
       expect(bundles.first).must_be_instance_of Bundle
     end
   end
