@@ -1,5 +1,5 @@
 class Bundle
-  @@stock = nil
+  @@bundles = nil
 
   attr_accessor :code, :qty, :price_in_cents, :name
 
@@ -8,5 +8,9 @@ class Bundle
     @qty = qty
     @price_in_cents = price_in_cents
     @name = name
+  end
+
+  def self.bundles
+    @@bundles
   end
 end
