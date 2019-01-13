@@ -20,7 +20,7 @@ class Bundle
   end
 
   def self.get_bundle_by_code(code)
-    self.get_bundles
+    self.load_bundles
     @@bundles.select { |bundle|
       bundle.code == code
     }
@@ -28,7 +28,7 @@ class Bundle
 
   private
 
-  def self.get_bundles
+  def self.load_bundles
     @@bundles = []
     file = File.read(PATH)
     bundles = JSON.parse(file, symbolize_names: true)
