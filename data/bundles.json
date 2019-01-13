@@ -1,0 +1,10 @@
+[
+  { "code": "R12", "price": 699, "qty": 5, "title": "Roses" },
+  { "code": "R12", "price": 1299, "qty": 10, "title": "Roses" },
+  { "code": "L09", "price": 995, "qty": 3, "title": "Lilies" },
+  { "code": "L09", "price": 1695, "qty": 6, "title": "Lilies" },
+  { "code": "L09", "price": 2495, "qty": 9, "title": "Lilies" },
+  { "code": "T58", "price": 595, "qty": 3, "title": "Tulips" },
+  { "code": "T58", "price": 995, "qty": 5, "title": "Tulips" },
+  { "code": "T58", "price": 1699, "qty": 9, "title": "Tulips" }
+]
