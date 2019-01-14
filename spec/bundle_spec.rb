@@ -1,6 +1,6 @@
 require "bundle"
 
-describe "bundle instance" do
+describe "bundle" do
   before(:all) { Bundle.class_variable_set :@@bundles, [] }
 
   let(:code) { :R12 }
