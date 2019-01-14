@@ -10,8 +10,6 @@ class Shop
   end
 
   def print_invoice
-    @order.line_items.each do |line_item|
-      line_item.
-    end
+    @order.print_line_items
   end
 end
