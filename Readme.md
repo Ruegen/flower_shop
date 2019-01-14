@@ -1,4 +1,4 @@
-# Flowershop challenge
+# FlowerShop challenge
 
 From my understanding this is a "coin change problem" and over a longer period of time I would aim to optimize the code. It utilizes the solution using a coin change algorithm and then maps the results to the flower bundles. One would want to do this in one go rather than a two step process.
 
