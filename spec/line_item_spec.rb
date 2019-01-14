@@ -17,19 +17,12 @@ describe "line item" do
 
   it "should print total of line items" do
     expected = "15 L09 $41.90\n"
-    out, err = capture_io do
-      line_item.print_total
-    end
-
-    expect(out).must_equal expected
+    expect { line_item.print_total }.must_output expected
   end
 
   it "should print subtotal of line items" do
     expected = "\t1 x 9 $24.95\n\t1 x 6 $16.95\n"
-    out, err = capture_io do
-      line_item.print_subtotal
-    end
-    expect(out).must_equal expected
+    expect { line_item.print_subtotal }.must_output expected
   end
 
   it "should find best fit for given quantity and bundle" do

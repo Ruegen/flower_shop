@@ -13,9 +13,6 @@ describe "shop" do
 " ""
     shop = Shop.new
     shop.issue_order
-    out, err = capture_io do
-      shop.print_invoice
-    end
-    expect(out).must_equal result
+    expect { shop.print_invoice }.must_output result
   end
 end
