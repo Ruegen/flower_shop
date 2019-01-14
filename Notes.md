@@ -20,3 +20,5 @@ order
 - #print subtotal order
 - orders
 - order
+
+NOTE: Changed to line_item to make things easier to manage
