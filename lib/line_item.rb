@@ -37,6 +37,8 @@ class LineItem
 
   private
 
+  # coin change problem algorithim
+  # returns an array of integers
   def get_best_fit(qty, bundle)
     return nil if qty < 0
     return nil if qty != qty.floor
